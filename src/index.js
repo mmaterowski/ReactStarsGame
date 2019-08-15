@@ -4,7 +4,13 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 const PlayNumber = props => (
-    <button className="number" onClick={() => console.log('Num', props.number)}>{props.number}</button>
+    <button
+        className="number"
+        style={{ backgroundColor: colors[props.status] }}
+        onClick={() => console.log('Num', props.number)}
+    >
+        {props.number}
+    </button>
 )
 
 const StarsDisplay = props => (
@@ -15,6 +21,20 @@ const StarsDisplay = props => (
 )
 const StarMatch = () => {
     const [stars, setStars] = React.useState(utils.random(1, 9));
+    const [availableNums, setAvailableNums] = React.useState(utils.range(1, 9));
+    const [candidateNums, setCandidateNums] = React.useState([]);
+
+    const candidatesAreWrong = utils.sum(candidateNums) > stars;
+
+    const numberStatus = (number) => {
+        if (!availableNums.includes(number)) {
+            return 'used';
+        }
+        if (candidateNums.includes(number)) {
+            return candidatesAreWrong ? 'wrong' : 'candidate';
+        }
+        return 'available';
+    };
     return (
         <div className="game">
             <div className="help">
@@ -26,7 +46,11 @@ const StarMatch = () => {
                 </div>
                 <div className="right">
                     {utils.range(1, 9).map(number =>
-                        <PlayNumber key={number} number={number} />
+                        <PlayNumber
+                            key={number}
+                            number={number}
+                            status={numberStatus(number)}
+                        />
                     )}
                 </div>
             </div>
