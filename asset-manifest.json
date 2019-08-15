@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ReactStarsGame/static/css/main.c4e9e033.chunk.css",
+    "main.js": "/ReactStarsGame/static/js/main.decbc282.chunk.js",
+    "main.js.map": "/ReactStarsGame/static/js/main.decbc282.chunk.js.map",
+    "runtime~main.js": "/ReactStarsGame/static/js/runtime~main.c8beb25b.js",
+    "runtime~main.js.map": "/ReactStarsGame/static/js/runtime~main.c8beb25b.js.map",
+    "static/js/2.54aa09c5.chunk.js": "/ReactStarsGame/static/js/2.54aa09c5.chunk.js",
+    "static/js/2.54aa09c5.chunk.js.map": "/ReactStarsGame/static/js/2.54aa09c5.chunk.js.map",
+    "index.html": "/ReactStarsGame/index.html",
+    "precache-manifest.7e4aead490dba0727c46b74dc7f97939.js": "/ReactStarsGame/precache-manifest.7e4aead490dba0727c46b74dc7f97939.js",
+    "service-worker.js": "/ReactStarsGame/service-worker.js",
+    "static/css/main.c4e9e033.chunk.css.map": "/ReactStarsGame/static/css/main.c4e9e033.chunk.css.map"
+  }
+}
